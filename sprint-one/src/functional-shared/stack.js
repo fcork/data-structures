@@ -11,17 +11,17 @@ var Stack = function() {
 };
 
 var stackMethods = {
-	push: function(value){
-  		this.storage[this.counter++] = value;
-  	},
-  	pop: function(){
-  		if (this.counter > 0){
-  		  this.counter --;
-  		  return this.storage[this.counter];
-  		  delete this.storage[this.counter];
-  	    }
-  	},
-  	size: function(){
-  		return this.counter;
-  	} 
+  push: function(value) {
+    this.storage[this.counter++] = value;
+  },
+  pop: function() {
+    if (this.counter > 0) {
+      this.counter --;
+      return this.storage[this.counter];
+      delete this.storage[this.counter];
+    }
+  },
+  size: function() {
+    return this.counter;
+  } 
 };

@@ -12,20 +12,20 @@ var Queue = function() {
 };
 
 var queueMethods = {
-	enqueue: function(value){
-  		this.storage[this.counter++] = value;
-  	},
-  	dequeue: function(){
-  		if (this.first < this.counter){
-  		  var removed = this.storage[this.first];
-  		  delete this.storage[this.first];
-  		  this.first ++;
-  		  return removed;
-  	    }
-  	},
-  	size: function(){
-  		return this.counter - this.first;
-  	} 
+  enqueue: function(value) {
+    this.storage[this.counter++] = value;
+  },
+  dequeue: function() {
+    if (this.first < this.counter){
+      var removed = this.storage[this.first];
+      delete this.storage[this.first];
+      this.first ++;
+      return removed;
+    }
+  },
+  size: function() {
+    return this.counter - this.first;
+  } 
 };
 
 
