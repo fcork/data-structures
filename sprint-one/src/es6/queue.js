@@ -7,20 +7,19 @@ class Queue {
     this.first = 0;
   }
 
-  enqueue(value){
+  enqueue(value) {
     this[this.counter++] = value;
   }
 
-  dequeue(){
-  	if (this.first < this.counter){
+  dequeue() {
+    if (this.first < this.counter) {
       var removed = this[this.first];
-      
       this.first++;
       return removed;
     }
   }
 
-  size(){
+  size() {
     return this.counter - this.first;
   }
 }

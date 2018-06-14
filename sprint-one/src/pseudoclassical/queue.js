@@ -6,8 +6,8 @@ var Queue = function() {
 };
 
 Queue.prototype.enqueue = function(value){
-	this[this.counter++] = value;
-},
+  this[this.counter++] = value;
+};
 
 Queue.prototype.dequeue = function(){
   if (this.first < this.counter){
@@ -15,10 +15,10 @@ Queue.prototype.dequeue = function(){
     this.first++;
     return removed;
   }
-}
+};
 
 Queue.prototype.size = function(){
   return this.counter - this.first;
-}
+};
 
 

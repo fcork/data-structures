@@ -7,19 +7,19 @@ var Stack = function() {
 };
 
 Stack.prototype.push = function(value){
-	this[this.counter++] = value;
-}
+  this[this.counter++] = value;
+};
 
 Stack.prototype.pop = function(value) {
   if (this.counter > 0) {
     this.counter --;
     return this[this.counter];
     delete this[this.counter];
-    }
-}
+  }
+};
 	
 Stack.prototype.size = function(){
   return this.counter;
-}
+};
 
 
