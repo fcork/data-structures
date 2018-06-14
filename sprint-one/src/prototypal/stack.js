@@ -9,17 +9,17 @@ var Stack = function() {
 };
 
 var stackMethods = {
-	push: function(value){
-  		this[this.counter++] = value;
-  	},
-  	pop: function(){
-  		if (this.counter > 0){
-  		  this.counter --;
-  		  return this[this.counter];
-  		  delete this[this.counter];
-  	    }
-  	},
-  	size: function(){
-  		return this.counter;
-  	} 
+  push: function(value) {
+    this[this.counter++] = value;
+  },
+  pop: function() {
+    if (this.counter > 0) {
+      this.counter --;
+      return this[this.counter];
+      delete this[this.counter];
+    }
+  },
+  size: function() {
+    return this.counter;
+  } 
 };
