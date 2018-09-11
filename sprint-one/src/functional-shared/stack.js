@@ -6,6 +6,7 @@ var Stack = function() {
   someInstance.counter = 0;
 
   _.extend(someInstance, stackMethods);
+  //Object.assign(someInstance, stackMethods) same as extend
 
   return someInstance;
 };

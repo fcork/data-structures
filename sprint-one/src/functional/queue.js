@@ -13,8 +13,8 @@ var Queue = function() {
   };
 
   someInstance.dequeue = function() {
-    if (first < counter){
-      var removed =  storage[first];
+    if (first < counter) {
+      var removed = storage[first];
       delete storage[first];
       first++;
       return removed;
@@ -22,7 +22,7 @@ var Queue = function() {
   };
 
   someInstance.size = function() {
-    return counter-first;
+    return counter - first;
   };
 
   return someInstance;

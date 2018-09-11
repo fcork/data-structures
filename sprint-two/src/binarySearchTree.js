@@ -7,31 +7,31 @@ var BinarySearchTree = function(value) {
 };
 
 var binaryTreeMethods = {
-  insert: function(value){
+  insert: function(value) {
     var newNode = BinarySearchTree(value);
-    if (this.value === value){
+    if (this.value === value) {
       return;
     }
-    if (this.value > value){
-      if(this.left === null){
+    if (this.value > value) {
+      if(this.left === null) {
         this.left = newNode;
       } else {
         this.left.insert(newNode.value);
       }
     }
     if (this.value < value){
-      if (this.right === null){
+      if (this.right === null) {
         this.right = newNode;
       } else {
         this.right.insert(newNode.value);
       }
     }
   },
-  contains: function(target){
+  contains: function(target) {
     if (this.value === target){
       return true;
     }
-    if (this.value < target){
+    if (this.value < target) {
       if (this.right !== null){
         return this.right.contains(target);
       }
@@ -42,10 +42,10 @@ var binaryTreeMethods = {
     }
     return false;
   },
-  depthFirstLog: function(callback){
+  depthFirstLog: function(callback) {
     callback(this.value);
     if (this.left){
-      this.left.depthFirstLog(callback)
+      this.left.depthFirstLog(callback);
     }
     if (this.right){
       this.right.depthFirstLog(callback);

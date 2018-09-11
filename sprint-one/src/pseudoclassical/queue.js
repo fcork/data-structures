@@ -5,19 +5,19 @@ var Queue = function() {
   this.first = 0;
 };
 
-Queue.prototype.enqueue = function(value){
+Queue.prototype.enqueue = function(value) {
   this[this.counter++] = value;
 };
 
-Queue.prototype.dequeue = function(){
-  if (this.first < this.counter){
+Queue.prototype.dequeue = function() {
+  if (this.first < this.counter) {
     var removed = this[this.first];
     this.first++;
     return removed;
   }
 };
 
-Queue.prototype.size = function(){
+Queue.prototype.size = function() {
   return this.counter - this.first;
 };
 

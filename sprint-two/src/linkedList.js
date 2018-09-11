@@ -9,7 +9,7 @@ var LinkedList = function() {
     this[counter++] = tailNode;
     var oldTail = list.tail;
     list.tail = tailNode;
-    if(oldTail !== null){
+    if (oldTail !== null) {
       oldTail.next = tailNode;
     } else {
       list.head = tailNode;
@@ -24,16 +24,12 @@ var LinkedList = function() {
 
   list.contains = function(target) {
     var currentNode = list.head;
-    if (currentNode.value === target){
-      return true;
-    } else {
-      while (currentNode.next){
-        currentNode = currentNode.next;
-         if(currentNode.value === target){
-           return true;
-         }
-      } 
-    }
+    while (currentNode) {
+      if (currentNode.value === target) {
+        return true;
+      }
+      currentNode = currentNode.next;
+    } 
     return false;
   };
 
@@ -52,3 +48,7 @@ var Node = function(value) {
 /*
  * Complexity: What is the time complexity of the above functions?
  */
+var list1 = new LinkedList;
+list1.addToTail(5);
+list1.addToTail(4);
+console.log(list1);
